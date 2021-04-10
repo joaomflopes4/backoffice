@@ -8,6 +8,9 @@ import Restaurantes from './Pages/Restaurantes';
 import Restaurantes_Registo from './Pages/Restaurantes_registo';
 import Confraria from './Pages/Confraria';
 import Domingos from './Pages/Domingos';
+import Restaurantes_editar from './Pages/Restaurantes_editar';
+import Restaurantes_recomendar from './Pages/Restaurantes_recomendar';
+import Restaurantes_estado from './Pages/Restaurantes_estado';
 
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
           <Route path='/restaurantes/registar' exact component={Restaurantes_Registo} />
           <Route path='/confraria' exact component={Confraria} />
           <Route path='/domingosr' exact component={Domingos} />
+          <Route path='/restaurantes/editar' exact component={Restaurantes_editar} />
+          <Route path='/restaurantes/recomendar' exact component={Restaurantes_recomendar} />
+          <Route path='/restaurantes/estado' exact component={Restaurantes_estado} />
         </Switch>
       </Router>
     </>

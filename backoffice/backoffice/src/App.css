@@ -24,8 +24,8 @@ h2 {
 }
 
 .form input {
-  width: 300px;
-  height: 60px;
+  width: 200px;
+  height: 25px;
   margin: 10px;
   font-size: 20px;
 }
@@ -36,6 +36,18 @@ h2 {
   max-width: 1500px;
   height: auto;
   border: 2px solid black;
+  border-radius: 15px;
+  margin: 10px;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.list {
+  width: auto;
+  min-width: 1000px;
+  max-width: 1500px;
+  height: auto;
+  border: 1px solid black;
   border-radius: 15px;
   margin: 10px;
   font-size: 20px;
@@ -64,4 +76,24 @@ h2 {
   align-items:  center;
   justify-content: center;
   font-size: 25px;
+}
+
+#recomendInput {
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+#estadoInput {
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+#aviso {
+  color: red;
+  font-size: 15px;
+}
+
+.campos {
+  margin-left: 30px;
+  margin-right: 25px;
 }

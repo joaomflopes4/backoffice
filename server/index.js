@@ -125,6 +125,47 @@ app.put('/api/update', (req, res)=> {
     });
 });
 
+//update Restaurante
+app.put('/api/updaterest', (req, res)=> {
+    const name = req.body.nome
+    const contacto = req.body.contacto
+    const diaCozido = req.body.diaCozido
+    const estado = req.body.estado
+    const precoMinimo = req.body.precoMinimo
+    const precoMaximo = req.body.precoMaximo
+    const horaInicio = req.body.horaInicio
+    const horaFim = req.body.horaFim
+    const recomendado = req.body.recomendado
+    const sqlUpdate = "UPDATE restaurante SET contacto = ?, diaCozido = ?, estado = ?, precoMinimo = ?, precoMaximo = ?, horaInicio = ?, horaFim = ?, recomendado = ? WHERE nome = ?";
+
+    db.query(sqlUpdate, [contacto, diaCozido, estado, precoMinimo, precoMaximo, horaInicio, horaFim, recomendado, name], (err, result) => {
+        if (err) console.log(err)
+    });
+});
+
+
+//update Restaurante Estado
+app.put('/api/updaterestest', (req, res)=> {
+    const name = req.body.nome
+    const estado = req.body.estado
+    const sqlUpdate = "UPDATE restaurante SET estado = ? WHERE nome = ?";
+
+    db.query(sqlUpdate, [estado, name], (err, result) => {
+        if (err) console.log(err)
+    });
+});
+
+//update Restaurante Recomendado
+app.put('/api/updaterestrec', (req, res)=> {
+    const name = req.body.nome
+    const recomendado = req.body.recomendado
+    const sqlUpdate = "UPDATE restaurante SET recomendado = ? WHERE nome = ?";
+
+    db.query(sqlUpdate, [recomendado, name], (err, result) => {
+        if (err) console.log(err)
+    });
+});
+
 //port definition
 app.listen(3001, () => {
     console.log('runing on port 3001');

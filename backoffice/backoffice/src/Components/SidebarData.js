@@ -37,7 +37,7 @@ export const SidebarData = [
     },
     {
         title: 'Restaurantes',
-        path: '/restaurantes',
+        
         icon: <GiForkKnifeSpoon />,
         cName: 'nav-text',
         iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -52,6 +52,16 @@ export const SidebarData = [
             {
               title: 'Editar',
               path: '/restaurantes/editar',
+              icon: <IoIcons.IoIosPaper />
+            },
+            {
+              title: 'Ativar / Desativar',
+              path: '/restaurantes/estado',
+              icon: <IoIcons.IoIosPaper />
+            },
+            {
+              title: 'Recomendar',
+              path: '/restaurantes/recomendar',
               icon: <IoIcons.IoIosPaper />
             }
           ]
