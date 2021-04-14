@@ -104,6 +104,19 @@ app.post("/api/insertres", (req, res) => {
 });
 
 
+//post regiao
+app.post("/api/insertreg", (req, res) => {
+
+    const nome = req.body.nome
+    const imagem = req.body.imagem
+    
+    const sqlInsertReg = "INSERT INTO regiao (nome, imagem) VALUES (?,?)"
+    db.query(sqlInsertReg, [nome, imagem], (err, result) => {
+        console.log(res);
+    });
+});
+
+
 //delete
 app.delete('/api/delete/:chave', (req, res)=> {
     const name = req.params.chave
@@ -162,6 +175,19 @@ app.put('/api/updaterestrec', (req, res)=> {
     const sqlUpdate = "UPDATE restaurante SET recomendado = ? WHERE nome = ?";
 
     db.query(sqlUpdate, [recomendado, name], (err, result) => {
+        if (err) console.log(err)
+    });
+});
+
+
+//update Regiao
+app.put('/api/updatereg', (req, res)=> {
+    const name = req.body.nome
+    const imagem = req.body.imagem
+
+    const sqlUpdate = "UPDATE regiao SET imagem = ? WHERE nome = ?";
+
+    db.query(sqlUpdate, [imagem, name], (err, result) => {
         if (err) console.log(err)
     });
 });

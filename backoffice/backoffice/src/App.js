@@ -11,6 +11,8 @@ import Domingos from './Pages/Domingos';
 import Restaurantes_editar from './Pages/Restaurantes_editar';
 import Restaurantes_recomendar from './Pages/Restaurantes_recomendar';
 import Restaurantes_estado from './Pages/Restaurantes_estado';
+import Regioes from './Pages/Regioes';
+import Regioes_editar from './Pages/Regioes_editar';
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <Route path='/restaurantes/editar' exact component={Restaurantes_editar} />
           <Route path='/restaurantes/recomendar' exact component={Restaurantes_recomendar} />
           <Route path='/restaurantes/estado' exact component={Restaurantes_estado} />
+          <Route path='/regioes/registar' exact component={Regioes} />
+          <Route path='/regioes/editar' exact component={Regioes_editar} />
         </Switch>
       </Router>
     </>

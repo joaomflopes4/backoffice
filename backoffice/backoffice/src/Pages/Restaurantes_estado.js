@@ -67,7 +67,7 @@ function Restaurantes_estado() {
       <div className="form">
       <input 
         type="text" 
-        placeholder="Search..." 
+        placeholder="Procurar..." 
         onChange={event => {
           setSearchTerm(event.target.value)
         }}
@@ -83,8 +83,8 @@ function Restaurantes_estado() {
             return ( 
               <div className="card">
                 <p><b>Nome:</b> {val.nome}</p>
-                <p><b>Estado:</b> {val.estado}</p>
-                <p id="aviso">* 1 = Ativo | 0 = Não ativo *</p>
+                <p><b>Estado:</b> {val.estado==1?'Ativo':'Não ativo'}</p>
+                {/* <p id="aviso">* 1 = Ativo | 0 = Não ativo *</p> */}
                 <br></br>
                 <br></br>
                

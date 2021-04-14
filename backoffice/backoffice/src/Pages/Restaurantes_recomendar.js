@@ -68,7 +68,7 @@ function Restaurantes_recomendar() {
       <div className="form">
       <input 
         type="text" 
-        placeholder="Search..." 
+        placeholder="Procurar..." 
         onChange={event => {
           setSearchTerm(event.target.value)
         }}
@@ -84,8 +84,8 @@ function Restaurantes_recomendar() {
             return ( 
               <div className="card">
                 <p><b>Nome:</b> {val.nome}</p>
-                <p><b>Recomendado:</b> {val.recomendado}</p>
-                <p id="aviso">* 1 = É recomendado | 0 = Não é recomendado *</p>
+                <p><b>Recomendado:</b> {val.recomendado==1?'Recomendado':'Não recomendado'}</p>
+                {/* <p id="aviso">* 1 = É recomendado | 0 = Não é recomendado *</p> */}
                 <br></br>
                 <br></br>
                

@@ -68,8 +68,23 @@ export const SidebarData = [
     },
     {
         title: 'Regiões',
-        path: '/regioes',
+  
         icon: <FaMapMarkerAlt />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        iconClosed: <RiIcons.RiArrowDownSFill />,
+        iconOpened: <RiIcons.RiArrowUpSFill />,
+
+        subNav: [
+          {
+            title: 'Registar',
+            path: '/regioes/registar',
+            icon: <IoIcons.IoIosPaper />
+          },
+          {
+            title: 'Editar',
+            path: '/regioes/editar',
+            icon: <IoIcons.IoIosPaper />
+          }
+        ]
     },
 ]

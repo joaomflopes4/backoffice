@@ -91,7 +91,7 @@ function Restaurantes_editar() {
       <div className="form">
       <input 
         type="text" 
-        placeholder="Search..." 
+        placeholder="Procurar..." 
         onChange={event => {
           setSearchTerm(event.target.value)
         }}
@@ -104,6 +104,7 @@ function Restaurantes_editar() {
             return val
           }
         }).map((val)=> {
+          {/* newContacto = {val.contacto} */}
             return ( 
               <div className="card">
                 <p><b>Nome:</b> {val.nome}</p>
@@ -121,7 +122,7 @@ function Restaurantes_editar() {
 
                 <div className="campos">
                     <label><b>Contacto</b>:</label>
-                    <input type="text" id="ContactoInput" required onChange={(e) => {
+                    <input type="text" id="ContactoInput" required value={val.contacto} onChange={(e) => {
                     setNewContacto(e.target.value)
                     /*defaultValue={val.contacto}*/
                     }} />
