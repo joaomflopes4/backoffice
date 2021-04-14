@@ -23,6 +23,36 @@ h2 {
   justify-content: center;
 }
 
+.conteudo {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#rec {
+  margin-left: 100px;
+}
+
+#reg {
+  margin-left: 50px;
+}
+
+#regiIn {
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+#estadoInput {
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+#recomendInput {
+  margin-left: 10px;
+  font-size: 17px;
+}
+
 .form input {
   width: 200px;
   height: 25px;
@@ -63,11 +93,29 @@ h2 {
 
 #butUpdate {
   margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+#butRegist {
+  margin-top: 10px;
   margin-bottom: 15px;
   font-size: 15px;
   width: 100px;
   height: 30px;
   border-radius: 15px;
+}
+
+#imagemInput {
+  font-size: 17px;
+  width: 39%;
+}
+
+#imm {
+  margin-left: 50px;
 }
 
 .home, .reports, .products {
@@ -96,4 +144,16 @@ h2 {
 .campos {
   margin-left: 30px;
   margin-right: 25px;
+}
+
+.logo{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 80px;
+  margin-bottom: 70px;
 }

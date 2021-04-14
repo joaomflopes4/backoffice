@@ -53,7 +53,7 @@ function Cozido() {
 
   return (
     <div className="App">
-      <h1>Cozido à Portuguesa</h1>
+      
 
       
 
@@ -62,9 +62,10 @@ function Cozido() {
         {recursosList.map((val)=> {
             return ( 
               <div className="card">
-              <h2>Descrição</h2>
+              <h1 className="desc">Cozido à Portuguesa</h1>
+              <h2 className="desc">Descrição</h2>
                 
-                <p>{val.valor}</p>
+                <p className="desc">{val.valor}</p>
                 <br></br>
 
                 <textarea type="text" id="updateInput" maxlength="10000" onChange={(e) => {

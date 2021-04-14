@@ -35,23 +35,28 @@ function Regioes() {
 
   return (
     <div className="App">
-      <h1>Registar Regiões</h1>
+      {/* <h1>Registar Regiões</h1> */}
     
       <div className="form">
-
+        <div className="card">
+        <h1>Registar Regiões</h1>
+          <div className="conteudo">
                 <label>Nome</label>
                 <input type="text" id="nomeInput" onChange={(e) => {
                   setNome(e.target.value)
                 }} />
+                
 
-                <label>Imagem</label>
+                <label id="imm">Imagem</label>
                 <input type="file" id="imagemInput" onChange={(e) => {
                   setImagem(e.target.value)
                 }} />
-
-                <button onClick={submitRestaurante}>Registar</button>
-
-            </div>
+                <br></br>
+                <br></br>
+                <button id="butRegist" onClick={submitRestaurante}>Registar</button>
+          </div>
+        </div>       
+      </div>
     </div>
   );
 }

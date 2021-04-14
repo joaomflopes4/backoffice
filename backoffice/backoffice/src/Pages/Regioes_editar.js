@@ -49,7 +49,7 @@ function Regioes_editar() {
       <div className="form">
       <input 
         type="text" 
-        placeholder="Search..." 
+        placeholder="Procurar..." 
         onChange={event => {
           setSearchTerm(event.target.value)
         }}
@@ -65,7 +65,7 @@ function Regioes_editar() {
           {/* newContacto = {val.contacto} */}
             return ( 
               <div className="card">
-                <p><b>Nome:</b> {val.nome}</p>
+                <h2> {val.nome}</h2>
                 <p><b>Imagem:</b> {val.imagem}</p>
                 {/* <image {...val.imagem}/> */}
                 

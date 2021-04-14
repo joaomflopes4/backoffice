@@ -62,10 +62,12 @@ function Restaurantes_registo() {
 
   return (
     <div className="App">
-      <h1>Registar Restaurantes</h1>
+      {/* <h1>Registar Restaurantes</h1> */}
     
       <div className="form">
-
+        <div className="card">
+        <h1>Registar Restaurantes</h1>
+          <div className="conteudo">
                 <label>Nome</label>
                 <input type="text" id="nomeInput" onChange={(e) => {
                   setNome(e.target.value)
@@ -86,6 +88,9 @@ function Restaurantes_registo() {
                   setDiaCozido(e.target.value)
                 }} />
 
+                <br></br>
+                <br></br>
+
                 <label>Latitude</label>
                 <input type="text" id="latitudeInput" onChange={(e) => {
                   setLatitude(e.target.value)
@@ -96,23 +101,21 @@ function Restaurantes_registo() {
                   setLongitude(e.target.value)
                 }} />
 
-                <label>Estado</label>
-                <select type="text" id="estadoInput" value={estado} onChange={(e) => {
-                  setEstado(e.target.value)
-                }} >
-                  <option value="0">Não ativo</option>
-                  <option value="1">Ativo</option>
-                </select>
 
                 <label>Preco Minimo</label>
                 <input type="text" id="precoMinimoInput" onChange={(e) => {
                   setPrecoMinimo(e.target.value)
                 }} />
 
+                
+                
                 <label>Preco Maximo</label>
                 <input type="text" id="PrecoMaximoInput" onChange={(e) => {
                   setPrecoMaximo(e.target.value)
                 }} />
+
+                <br></br>
+                <br></br>
 
 
                 <TextField
@@ -154,9 +157,19 @@ function Restaurantes_registo() {
                 value = {horaFim}
               />
 
+                <br></br>
+                <br></br>
+                <br></br>
 
+                <label>Estado</label>
+                <select type="text" id="estadoInput" value={estado} onChange={(e) => {
+                  setEstado(e.target.value)
+                }} >
+                  <option value="0">Não ativo</option>
+                  <option value="1">Ativo</option>
+                </select>
 
-                <label>Avaliacao Predefinida</label>
+                {/* <label>Avaliacao Predefinida</label>
                 <select type="text" id="avaliacaoTotalInput" value={avaliacaoTotal} onChange={(e) => {
                   setAvaliacaoTotal(e.target.value)
                 }} >
@@ -166,8 +179,8 @@ function Restaurantes_registo() {
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
-                </select>
-                <br></br>
+                </select> */}
+                
 
 
                 {/* <label>Avaliacao Total</label>
@@ -177,8 +190,9 @@ function Restaurantes_registo() {
 
 
 
-                <label>Região</label>
+                <label id="reg">Região</label>
                 <select
+                id="regiIn"
                 value={idRegiao.id}
                 onChange={(e) => setOpcRegiao(e.target.value)}
                 >
@@ -202,7 +216,7 @@ function Restaurantes_registo() {
 
 
 
-                <br></br>
+                
 
 
 
@@ -212,7 +226,7 @@ function Restaurantes_registo() {
                 }} /> */}
 
 
-                <label>Recomendação</label>
+                <label id="rec">Recomendação</label>
                 <select type="text" id="recomendInput" value={recomendado} onChange={(e) => {
                   setRecomendado(e.target.value)
                 }} >
@@ -226,10 +240,13 @@ function Restaurantes_registo() {
                 }} /> */}
 
                 <br></br>
+                <br></br>
+                <br></br>
 
-                <button onClick={submitRestaurante}>Registar</button>
-
-            </div>
+                <button id="butRegist" onClick={submitRestaurante}>Registar</button>
+                </div>
+              </div>
+          </div>
     </div>
   );
 }

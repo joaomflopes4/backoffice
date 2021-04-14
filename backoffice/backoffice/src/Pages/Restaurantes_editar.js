@@ -107,7 +107,7 @@ function Restaurantes_editar() {
           {/* newContacto = {val.contacto} */}
             return ( 
               <div className="card">
-                <p><b>Nome:</b> {val.nome}</p>
+                <h2> {val.nome}</h2>
                 <p><b>Morada:</b> {val.morada}</p>
                 <p><b>Contacto:</b> {val.contacto}</p>
                 <p><b>Dia de Cozido:</b> {val.diaCozido}</p>
@@ -122,7 +122,7 @@ function Restaurantes_editar() {
 
                 <div className="campos">
                     <label><b>Contacto</b>:</label>
-                    <input type="text" id="ContactoInput" required value={val.contacto} onChange={(e) => {
+                    <input type="text" id="ContactoInput" required onChange={(e) => {
                     setNewContacto(e.target.value)
                     /*defaultValue={val.contacto}*/
                     }} />

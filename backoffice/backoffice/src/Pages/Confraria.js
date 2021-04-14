@@ -53,7 +53,7 @@ function Confraria() {
 
   return (
     <div className="App">
-      <h1>Confraria</h1>
+      
 
       
 
@@ -62,6 +62,7 @@ function Confraria() {
         {recursosList.map((val)=> {
             return ( 
               <div className="card">
+              <h1>Confraria</h1>
               <h2>Descrição</h2>
                 
                 <p>{val.valor}</p>

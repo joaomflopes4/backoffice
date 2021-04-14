@@ -53,7 +53,7 @@ function Domingos() {
 
   return (
     <div className="App">
-      <h1>Domingos</h1>
+      {/* <h1>Domingos Rodrigues</h1> */}
 
       
 
@@ -62,6 +62,7 @@ function Domingos() {
         {recursosList.map((val)=> {
             return ( 
               <div className="card">
+              <h1>Domingos Rodrigues</h1>
               <h2>Descrição</h2>
                 
                 <p>{val.valor}</p>
