@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const mysql = require('mysql')
+const fileUpload = require('express-fileupload')
+var multer = require('multer');
 
 //connect DB
 const db = mysql.createPool({
@@ -15,6 +17,41 @@ const db = mysql.createPool({
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(fileUpload());
+
+// Upload Endpoint
+app.post('/api/imggg', (req, res) => {
+    if (req.files === null) {
+      return res.status(400).json({ msg: 'No file uploaded' });
+    }
+  
+    const imagem = req.files.imagem;
+  
+    imagem.mv(`${__dirname}/../backoffice/backoffice/public/uploads/${imagem.name}`, err => {
+      if (err) {
+        console.error(err);
+        return res.status(500).send(err);
+      }
+  
+      res.json({ fileName: imagem.name, filePath: `/uploads/${imagem.name}` });
+    });
+  });
+
+//post regiao
+app.post("/api/insertRegiao", (req, res) => {
+
+    const nome = req.body.nome
+    const imagem = req.body.imagem
+    
+    const sqlInsertReg = "INSERT INTO regiao (nome, imagem) VALUES (?,?)"
+    db.query(sqlInsertReg, [nome, imagem], (err, result) => {
+        console.log(res);
+    });
+});
+  
+
+
+
 
 //get
 app.get('/api/get', (req, res) => {
@@ -59,7 +96,15 @@ app.get('/api/get/restaurantes', (req, res) => {
 
 //get regiao
 app.get('/api/get/regiao', (req, res) => {
-    const sqlSelect = "SELECT * FROM regiao;";
+    const sqlSelect = "SELECT * FROM regiao";
+    db.query(sqlSelect, (err, result) => {
+        res.send(result);
+    });
+});
+
+//get regiaoListar
+app.get('/api/get/regiaolist', (req, res) => {
+    const sqlSelect = "SELECT * FROM regiao WHERE id != 10;";
     db.query(sqlSelect, (err, result) => {
         res.send(result);
     });

@@ -61,7 +61,7 @@ function Restaurantes_recomendar() {
 
   return (
     <div className="App">
-      <h1>Recomendar de Restaurantes</h1>
+      <h1>Recomendar Restaurantes</h1>
 
       
 
