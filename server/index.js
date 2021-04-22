@@ -188,15 +188,15 @@ app.put('/api/updaterest', (req, res)=> {
     const name = req.body.nome
     const contacto = req.body.contacto
     const diaCozido = req.body.diaCozido
-    const estado = req.body.estado
+    // const estado = req.body.estado
     const precoMinimo = req.body.precoMinimo
     const precoMaximo = req.body.precoMaximo
     const horaInicio = req.body.horaInicio
     const horaFim = req.body.horaFim
-    const recomendado = req.body.recomendado
-    const sqlUpdate = "UPDATE restaurante SET contacto = ?, diaCozido = ?, estado = ?, precoMinimo = ?, precoMaximo = ?, horaInicio = ?, horaFim = ?, recomendado = ? WHERE nome = ?";
+    // const recomendado = req.body.recomendado
+    const sqlUpdate = "UPDATE restaurante SET contacto = ?, diaCozido = ?, precoMinimo = ?, precoMaximo = ?, horaInicio = ?, horaFim = ? WHERE nome = ?";
 
-    db.query(sqlUpdate, [contacto, diaCozido, estado, precoMinimo, precoMaximo, horaInicio, horaFim, recomendado, name], (err, result) => {
+    db.query(sqlUpdate, [contacto, diaCozido, precoMinimo, precoMaximo, horaInicio, horaFim, name], (err, result) => {
         if (err) console.log(err)
     });
 });

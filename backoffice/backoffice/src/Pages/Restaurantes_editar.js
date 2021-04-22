@@ -55,12 +55,12 @@ function Restaurantes_editar() {
         nome: nom, 
         contacto: newContacto,
         diaCozido: newDiaCozido,
-        estado: newEstado,
+        // estado: newEstado,
         precoMinimo: newPrecoMinimo,
         precoMaximo: newPrecoMaximo,
         horaInicio: newHoraInicio + ":00",
         horaFim: newHoraFim + ":00",
-        recomendado: newRecomendado,
+        // recomendado: newRecomendado,
     });
 
     // setNewValor("");

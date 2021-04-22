@@ -115,7 +115,7 @@ function Regioes_editar() {
         }).map((val)=> {
           {/* newContacto = {val.contacto} */}
             return ( 
-              <div className="card">
+              <div className="cardRegi">
                 <h2> {val.nome}</h2>
                 <img style={{ width: '30%' }} src={val.imagem}></img>
                 {/* <image {...val.imagem}/> */}
